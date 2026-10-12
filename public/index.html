@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pocket Calculator - Máy Tính Cầm Tay</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Khu vực Máy tính chính -->
+    <div class="calculator-card">
+      <!-- Header của máy tính -->
+      <div class="calc-header">
+        <div class="brand">
+          <i class="fa-solid fa-calculator"></i>
+          <span>VIBECODE CALC</span>
+        </div>
+        <div class="header-actions">
+          <button id="toggle-history-btn" title="Xem lịch sử">
+            <i class="fa-solid fa-history"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Màn hình hiển thị (Display) -->
+      <div class="display-container">
+        <div class="formula-display" id="formula-display"></div>
+        <div class="main-display" id="main-display">0</div>
+      </div>
+
+      <!-- Bàn phím máy tính (Keypad) -->
+      <div class="keypad">
+        <!-- Hàng 1 -->
+        <button class="btn btn-action" data-action="clear" id="btn-clear">C</button>
+        <button class="btn btn-action" data-action="backspace" id="btn-backspace" data-key="Backspace">
+          <i class="fa-solid fa-delete-left"></i>
+        </button>
+        <button class="btn btn-action" data-action="percent" data-key="%">%</button>
+        <button class="btn btn-operator" data-operator="/" data-key="/">÷</button>
+
+        <!-- Hàng 2 -->
+        <button class="btn btn-number" data-val="7" data-key="7">7</button>
+        <button class="btn btn-number" data-val="8" data-key="8">8</button>
+        <button class="btn btn-number" data-val="9" data-key="9">9</button>
+        <button class="btn btn-operator" data-operator="*" data-key="*">×</button>
+
+        <!-- Hàng 3 -->
+        <button class="btn btn-number" data-val="4" data-key="4">4</button>
+        <button class="btn btn-number" data-val="5" data-key="5">5</button>
+        <button class="btn btn-number" data-val="6" data-key="6">6</button>
+        <button class="btn btn-operator" data-operator="-" data-key="-">−</button>
+
+        <!-- Hàng 4 -->
+        <button class="btn btn-number" data-val="1" data-key="1">1</button>
+        <button class="btn btn-number" data-val="2" data-key="2">2</button>
+        <button class="btn btn-number" data-val="3" data-key="3">3</button>
+        <button class="btn btn-operator" data-operator="+" data-key="+">+</button>
+
+        <!-- Hàng 5 -->
+        <button class="btn btn-action" data-action="toggle-sign">±</button>
+        <button class="btn btn-number" data-val="0" data-key="0">0</button>
+        <button class="btn btn-number" data-val="." data-key=".">.</button>
+        <button class="btn btn-equals" id="btn-equals" data-key="Enter">=</button>
+      </div>
+    </div>
+
+    <!-- Khu vực Lịch sử (History Panel) -->
+    <div class="history-panel" id="history-panel">
+      <div class="history-header">
+        <h3><i class="fa-solid fa-clock-rotate-left"></i> Lịch sử phép tính</h3>
+        <button id="clear-history-btn" title="Xóa toàn bộ lịch sử">
+          <i class="fa-solid fa-trash-can"></i>
+        </button>
+      </div>
+      <div class="history-list" id="history-list">
+        <!-- Các mục lịch sử sẽ được render động ở đây -->
+        <div class="empty-history">Chưa có lịch sử phép tính nào</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification cho thông báo lỗi -->
+  <div class="toast" id="toast-notification"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+```
+
+---
