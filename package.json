@@ -1,0 +1,28 @@
+{
+  "name": "pocket-calculator-app",
+  "version": "1.0.0",
+  "description": "Ứng dụng máy tính cầm tay đa năng với giao diện Neumorphism, hỗ trợ lưu lịch sử và phím tắt bàn phím.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "playwright test"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.42.1"
+  },
+  "keywords": [
+    "calculator",
+    "neumorphism",
+    "pocket-calculator",
+    "javascript",
+    "localstorage"
+  ],
+  "author": "Vibecode Senior Full-Stack Developer",
+  "license": "ISC"
+}
+```
+
+---
